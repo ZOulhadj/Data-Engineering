@@ -11,3 +11,8 @@
 * Scrum Master (Taylor Head)
 * Team Leader 1 (Adam Zbikowski)
 * Team Leader 2 (Samoil Bogdan)
+
+* [@ZOulhadj](https://github.com/ZOulhadj) - Product Owner
+* [@Nero-DevOps](https://github.com/Nero-DevOps) - Scrum Master
+* [@Frioo](https://github.com/Frioo) - Team Leader 1
+* [@archeris32](https://github.com/archeris32) - Team Leader 2
