@@ -2,8 +2,8 @@
 
  
 ## Introduction
-DataMovers is a group that is made up of diverse, enthusiastic and like-minded people that work together towards a common goal. 
-Productive communication between DataMovers group members and the tutor are critical factors for teamwork. The University of Roehamptons student code of conduct
+Binary Bandits is a group that is made up of diverse, enthusiastic and like-minded people that work together towards a common goal. 
+Productive communication between Binary Bandits group members and the tutor are critical factors for teamwork. The University of Roehamptons student code of conduct
 ([Roehampton Student Code of Conduct](https://www.roehampton.ac.uk/globalassets/documents/corporate-information/policies/student-code-of-conduct-july-2018.pdf)) is the backbone for our group, In other words, our group’s code of conduct builds on top of this to provide a well-defined set of rules
 that ensures professional behavior, high standards of work and most importantly working together. Our goal is to create an environment where each member can reach their potential, where everyone feels safe, accepted and valued.
 
