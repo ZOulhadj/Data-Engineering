@@ -5,12 +5,12 @@ import random
 num_rows = 100
 
 # Open a CSV file for writing
-with open('generated_data.csv', 'w', newline='') as file:
+with open("./data/generated_data.csv", "w", newline="") as file:
     writer = csv.writer(file)
-    
+
     # Write the header row
     writer.writerow(["Name", "Age", "Country"])
-    
+
     # Generate and write the data rows
     for i in range(num_rows):
         name = "Person" + str(i)
