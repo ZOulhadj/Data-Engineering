@@ -56,9 +56,13 @@ He will take responsibility of applying current Code of Conduct/Roehampton's Stu
 		
 ## Sanctions	
 Where a member is found to have breached the Code of Conduct, the group may take the following actions:
-* Issue a report to class tutor
+* 1st offense - the culprit buys a drink for all the other members of the team
+* 2nd offense - the culprit buys lunch for all the other members of the team
+* 3rd offense - the culprit buys dinner for all the other members of the team
+* 4th offense - Issue a report to class tutor
 * Suspension of the group member(s) until further notice
 
+All the sanctions will be applied , unless there is a reasonable motive for the offense.
 If the team cannot come to an agreement this will result in the member involved being released from the
 group.
 
