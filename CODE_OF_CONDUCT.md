@@ -81,7 +81,7 @@ The meetings will take place every Monday and Wednesday at 21:00, unless we agre
 
 ## Members and Contact
 For any enquiries regarding the current project please contact one of the following group members:
-* [@ZOulhadj](https://github.com/ZOulhadj) - #
-* [@archeris32](https://github.com/archeris32) - #
-* [@Frioo](https://github.com/Frioo) - #
-* [@Nero-DevOps](https://github.com/Nero-DevOps) - #
+* [@ZOulhadj](https://github.com/ZOulhadj) - oulhadjz@roehampton.ac.uk
+* [@archeris32](https://github.com/archeris32) - adascals@roehampton.ac.uk
+* [@Frioo](https://github.com/Frioo) - zbikowsa@roehampton.ac.uk
+* [@Nero-DevOps](https://github.com/Nero-DevOps) - headt@roehampton.ac.uk
