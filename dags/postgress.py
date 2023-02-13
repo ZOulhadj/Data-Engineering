@@ -2,6 +2,13 @@ from airflow import DAG
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
 
+def read_and_load_file():
+    # Your code to read and load the file here
+    with open('./data/generated_data.csv') as f:
+        contents = f.read()
+        # Do something with the contents of the file
+        print(contents)
+
 default_args = {
     'owner': 'you',
     'depends_on_past': False,
@@ -11,13 +18,6 @@ default_args = {
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
-
-def read_and_load_file():
-    # Your code to read and load the file here
-    with open("/opt/airflow/data/generated_data.csv") as f:
-        contents = f.read()
-    # Do something with the contents of the file
-    print(contents)
 
 dag = DAG(
     'read_and_load_file_dag',
