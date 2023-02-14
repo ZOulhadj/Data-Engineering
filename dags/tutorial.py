@@ -1,33 +1,50 @@
 from airflow import DAG
+from airflow.hooks.postgres_hook import PostgresHook
+from airflow.operators.postgres_operator import PostgresOperator
 from airflow.operators.python_operator import PythonOperator
 from datetime import datetime, timedelta
 
 default_args = {
     'owner': 'you',
     'depends_on_past': False,
-    'start_date': datetime(2022, 1, 1),
+    'start_date': datetime(2023, 1, 1),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 1,
     'retry_delay': timedelta(minutes=5),
 }
 
-def read_and_load_file():
-    # Your code to read and load the file here
-    with open("/opt/airflow/data/generated_data.csv") as f:
-        contents = f.read()
-    # Do something with the contents of the file
-    print(contents)
-
+# Create the DAG
 dag = DAG(
-    'read_and_load_file_dag',
+    'postgres_load_dag',
     default_args=default_args,
-    schedule_interval='0 0 * * *',
-    catchup=False,
+    description='A data pipeline example to load data into a PostgreSQL database using the PostgresOperator in Apache Airflow',
+    schedule_interval=timedelta(hours=1),
 )
 
-read_and_load_file_task = PythonOperator(
-    task_id='read_and_load_file',
-    python_callable=read_and_load_file,
+# Define the task: creating the table 'data' in the PostgreSQL database
+create_table_task = PostgresOperator(
+    task_id='create_table',
+    postgres_conn_id='postgres_conn',
+    sql="""
+        CREATE TABLE data (
+            Name text,
+            Age text,
+            Country text
+        );
+    """,
     dag=dag,
 )
+
+# Define the task: loading data from a CSV file into a PostgreSQL database
+load_data_task = PostgresOperator(
+    task_id='load_data',
+    postgres_conn_id='postgres_conn',
+    sql="""
+        COPY data FROM './data/generated_data.csv' DELIMITER ',' CSV HEADER;
+    """,
+    dag=dag,
+)
+
+# Set the order of the tasks
+create_table_task >> load_data_task
