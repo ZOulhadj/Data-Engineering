@@ -31,6 +31,8 @@ services:
       test: ["CMD", "pg_isready", "-U", "airflow"]
       interval: 5s
       retries: 5
+    volumes:
+      - ./data:/data
     env_file:
       - .env
 

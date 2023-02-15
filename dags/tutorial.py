@@ -39,7 +39,7 @@ create_table_task = PostgresOperator(
 load_data_task = PostgresOperator(
     task_id='load_data',
     sql="""
-        COPY data FROM './data/generated_data.csv' DELIMITER ',' CSV HEADER;
+        COPY data FROM '/data/generated_data.csv' DELIMITER ',' CSV HEADER;
     """,
     dag=dag,
 )
