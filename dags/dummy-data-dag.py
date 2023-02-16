@@ -46,5 +46,21 @@ load_data_task = PostgresOperator(
     dag=dag,
 )
 
+# Define the task: printing the data loaded by load_data_task
+def print_data():
+    pg_hook = PostgresHook(postgres_conn_id='postgres_default')
+    connection = pg_hook.get_conn()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM data")
+    records = cursor.fetchall()
+    for record in records:
+        print(record)
+
+print_data_task = PythonOperator(
+    task_id='print_data',
+    python_callable=print_data,
+    dag=dag,
+)
+
 # Set the order of the tasks
-create_table_task >> load_data_task
+create_table_task >> load_data_task >> print_data_task
