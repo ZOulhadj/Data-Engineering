@@ -1,3 +1,5 @@
+![alt text](https://i.ibb.co/pxZJgGv/Screenshot-20230216-170938-removebg-preview.png?raw=true)
+
 # Team Members
 * Zakariya Oulhadj
 * Taylor Head
