@@ -6,7 +6,7 @@ Additionally, user stories are recorded through several methods:
 
 ### Sprint 1 user stories
 * Define Code of Conduct ✅
-* Create product backlog ❌
+* Create product backlog ✅
 * Define initial user stories ✅
 * Create GitHub workflow ✅
 * Define roles for all team members ✅
