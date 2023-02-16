@@ -25,7 +25,7 @@ dag = DAG(
 # Define the task: creating the table 'data' in the PostgreSQL database
 create_table_task = PostgresOperator(
     task_id='create_table',
-    postgres_conn_id='postgres_conn',
+    postgres_conn_id='postgres_default',
     sql="""
         CREATE TABLE IF NOT EXISTS data (
             Name VARCHAR,
@@ -39,7 +39,7 @@ create_table_task = PostgresOperator(
 # Define the task: loading data from a CSV file into a PostgreSQL database
 load_data_task = PostgresOperator(
     task_id='load_data',
-    postgres_conn_id='postgres_conn',
+    postgres_conn_id='postgres_default',
     sql="""
         COPY data FROM '/data/generated_data.csv' DELIMITER ',' CSV HEADER;
     """,
