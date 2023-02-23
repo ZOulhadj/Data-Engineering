@@ -2,6 +2,8 @@ from airflow import DAG
 from airflow.hooks.postgres_hook import PostgresHook
 from airflow.operators.postgres_operator import PostgresOperator
 from airflow.operators.python_operator import PythonOperator
+from airflow.operators.bash_operator import BashOperator
+
 from datetime import datetime, timedelta
 
 default_args = {
@@ -62,5 +64,6 @@ print_data_task = PythonOperator(
     dag=dag,
 )
 
+
 # Set the order of the tasks
-create_table_task >> load_data_task >> print_data_task
+create_table_task >> load_data_task >> print_data_task 
