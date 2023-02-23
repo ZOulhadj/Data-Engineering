@@ -3,6 +3,8 @@
   <img width="50%" height="auto" src="https://github.com/Roe-Binary-Bandits/Data-Engineering/raw/develop/assets/logo.png">
 </p>
 
+# [Get started (wiki)](https://github.com/Roe-Binary-Bandits/Data-Engineering/wiki)
+
 # Team Members
 * Zakariya Oulhadj
 * Taylor Head
