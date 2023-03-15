@@ -1,0 +1,14 @@
+# 1. Set the virtual Python enviornment
+#   - Windows
+#       Powershell: .\venv\Scripts\Activate.ps1
+#       Other: .\venv\Scripts\activate.bat
+#   - Unix (Linux or macOS)
+#       Shell: ./venv/Scripts/activate
+#
+# 2. Install required Python packages into virtual environment.
+#   - pip install -r requirements.txt
+#
+# 3. Run Python scripts via virtual environment shell
+
+# Packages
+requests
