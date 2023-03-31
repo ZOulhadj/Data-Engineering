@@ -4,6 +4,7 @@ from airflow.models import Connection
 from airflow.operators.python_operator import PythonOperator
 
 
+# fixme: an error is created when running for the first time. does not occur on subsequent runs.
 
 def create_conn(**kwargs):
     conn = Connection(conn_id=kwargs["conn_id"],
