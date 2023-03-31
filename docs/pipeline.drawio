@@ -1,1 +1,61 @@
-<mxfile host="Electron" modified="2023-03-30T00:00:15.869Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/20.8.10 Chrome/106.0.5249.199 Electron/21.3.5 Safari/537.36" etag="BFFkKPi7oDyGov6K_qtu" version="20.8.10" type="device"><diagram name="Page-1" id="afUFnseTAe0Wrm9iywZ8">7VdNj5swEP01OWYFOED22A27rVatGimV2j26MAGrxkbGLKS/vnYw38lmW6VKDrlEnsf46817HmWGVmn1UeAs+cIjoDPHiqoZCmaO4/tL9auBXQ14aFEDsSBRDdkdsCG/wYCWQQsSQT5IlJxTSbIhGHLGIJQDDAvBy2HaltPhrhmOYQJsQkyn6HcSyaRGl47f4Z+AxEmzs+3d119S3CSbm+QJjnjZg9DjDK0E57IepdUKqOau4aWe93Tka3swAUy+a8L2ebMuffLZrrJg/nz/lCRyblZ5xbQwFw54ySjHka4ZljgHaY4vdw0nghcsAr2sNUMPZUIkbDIc6q+lEoHCEplSFdlqaDYAIaE6enK75UPpCHgKUuxUipmAPEOh0ZDdxGVXEbuhOelVY2EwbEQQt0t3PKmBoeovaHMmtK0oYGY4uzrCWiIuRhiaEPa1kFkhW8Y8nGoe2M88azm4IgYX1qUZXEwYnJAELPqgnzwVhRTnOQmHvAxJhIrIH3p855roxeTpcVD10oJdEzB1ld4kHb70v3XT9lEzrz4qRJO3dlQPdR1eiBDe4KFpAljEIN/Icw7Xt1c/90D5GkwAxZK8Do97qKZmhzUnTHbysdFQPsgayaK+ppnVf7THCy1HTnZHC9U8TBbaS6y99r+rzp32h71dLSkwy7dcqDZHOLs6vyLn0n71bn7tt8qTfnUv6Vc0shka2+y9fl2cMv5/9qt/U13/3TqpOnRT3RlUtzygOo9KrStFihfrkekba5IBJQyaBLVflzPRqmoIcqjOXAr+C1accqEQxtVK6GFLKB1Bueo2hMUKcLvoG1edJ5g7x3oSVz1oS/fWSEgUAZvYAVMSM+0cpUgQZ+pdyL9zB/VbHmhennuW5qXC7i9nXf/ufzt6/AM=</diagram></mxfile>
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="afUFnseTAe0Wrm9iywZ8">
+        <mxGraphModel dx="1093" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-1" value="Download dataset" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="160" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-2" value="Clean data" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="240" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-3" value="Output data&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="480" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-4" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1fJSPw7iL1xpD-J9Fhht-1" target="1fJSPw7iL1xpD-J9Fhht-2" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="130" y="300" as="sourcePoint"/>
+                        <mxPoint x="180" y="250" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1fJSPw7iL1xpD-J9Fhht-5" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-5" value="Data transformation" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="320" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="1fJSPw7iL1xpD-J9Fhht-2" target="1fJSPw7iL1xpD-J9Fhht-5" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="350" as="sourcePoint"/>
+                        <mxPoint x="430" y="300" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="1fJSPw7iL1xpD-J9Fhht-8" value="&lt;h1&gt;Data Pipeline&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="337.5" y="80" width="165" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Obtain datasets from source" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="165" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Perform data preprocessing to remove null/emoty values and other misc data values" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="245" width="197.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Transform dataset into smaller tables with specific data related to queries&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="325" width="197.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="7" target="1fJSPw7iL1xpD-J9Fhht-3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Queries" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="400" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Perform specific queries with the newly transformed data" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="400" width="197.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Display results of the queries onto console or in a webpage" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="480" width="197.5" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
