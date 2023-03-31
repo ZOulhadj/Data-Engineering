@@ -6,7 +6,7 @@ def copy_pp_complete_to_table(dag: DAG) -> PostgresOperator:
         task_id='load_data',
         postgres_conn_id='postgres_default',
         sql="""
-            COPY prices_paid FROM '/data/pp-2022.csv' DELIMITER ',' CSV;
+            COPY pp_complete FROM '/data/pp-2022.csv' DELIMITER ',' CSV;
         """,
         dag=dag,
     )   

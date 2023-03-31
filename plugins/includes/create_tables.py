@@ -6,7 +6,7 @@ def create_table(dag: DAG) -> PostgresOperator:
         task_id='create_table',
         postgres_conn_id='postgres_default',
         sql="""
-            CREATE TABLE IF NOT EXISTS pp-complete (
+            CREATE TABLE IF NOT EXISTS pp_complete (
                 transaction_id VARCHAR PRIMARY KEY,
                 price int,
                 transfer_date timestamp,
