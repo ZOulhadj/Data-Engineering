@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS pp_complete (
+CREATE TABLE IF NOT EXISTS data.pp_complete (
     transaction_id VARCHAR PRIMARY KEY,
     price int,
     transfer_date timestamp,
