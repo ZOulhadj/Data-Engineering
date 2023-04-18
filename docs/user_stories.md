@@ -15,6 +15,7 @@ Additionally, user stories are recorded through several methods:
 * Add Kibana and ElasticSearch to the env✅
 * Design logo✅
 * Data Ingestion✅
+* Data Preprocessing and Cleaning✅
 ### Sprint 3 user stories
 * DAG update ✅
 * Integration with Google Cloud
