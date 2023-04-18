@@ -19,6 +19,11 @@ default_args = {
     'retries': 0,
 }
 
+
+datasets = {
+    "pp-2022": "http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-2022.csv",
+}
+
 with DAG(
     dag_id='data-pipeline',
     default_args=default_args,
@@ -28,7 +33,7 @@ with DAG(
     task_0 = create_airflow_connection(dag)
     task_1 = create_database(dag)
     task_2 = create_table(dag)
-    task_3 = download_pp_complete(dag)
+    task_3 = download_pp_complete(dag, datasets)
     task_4 = copy_pp_complete_to_table(dag)
     task_5 = perform_pp_complete_queries(dag)
     task_6 = output_queries(dag)
