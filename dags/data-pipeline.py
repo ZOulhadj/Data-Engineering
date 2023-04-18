@@ -21,7 +21,7 @@ default_args = {
 
 
 datasets = {
-    "housing": "http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.csv",
+    "pp-2022": "http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-2022.csv",
 }
 
 with DAG(
