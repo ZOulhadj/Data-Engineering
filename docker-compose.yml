@@ -34,8 +34,7 @@ services:
     networks:
       - my_network
   webserver:
-    <<: *common
-    <<: *depends-on
+    <<: [*common, *depends-on]
     container_name: airflow-webserver
     command: webserver
     restart: always
@@ -67,8 +66,7 @@ services:
       - my_network
 
   scheduler:
-    <<: *common
-    <<: *depends-on
+    <<: [*common, *depends-on]
     container_name: airflow-scheduler
     command: scheduler
     restart: on-failure
