@@ -10,3 +10,5 @@
 | 5 | 31/03/2023 | 30 minutes  | Online | This meeting took place after the Sprint 2 deadline which was delayed by a week. During this meeting we quickly discussed the DAGS we were currently working on and tasks that had to be completed. Taylor and Adam started work on the Analysis, Clean and Download DAGS. Zak and Bogdan continued working on the documentation as well as the Output DAG. |
 | 6 | 4/04/2023 | 2 hours  | Online | This meeting was all about setting up the final steps of pipeline implementation.Taylor and Adam bringed us up to date about the development of the DAGs. Zak and Bogdan had to continue with the documentation and documenting about Google cloud implementation.|
 | 7 | 11/04/2023 | 30 minutes  | Online | Short meeting , quick review of things left to be done.|
+| 8 | 18/04/2023 | 3 hours  | Online | All 4 of us met and we were trying to see what is left to do. Everyone was helping eachother and made sure that everything is in the right place. We aggreed on the last steps needed to be taken to complete the project.|
+
