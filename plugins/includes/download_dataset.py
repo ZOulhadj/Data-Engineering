@@ -1,8 +1,9 @@
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+
 import requests
 
-datasets = {
-    "housing": "http://prod.publicdata.landregistry.gov.uk.s3-website-eu-west-1.amazonaws.com/pp-complete.csv",
-}
+
 
 # Download and create dataset files
 def download_dataset(name, url, output_folder="./data/", output_format=".csv"):
@@ -14,8 +15,10 @@ def download_dataset(name, url, output_folder="./data/", output_format=".csv"):
     return output_location
 
 
-def main():
+def entry_point(**kwargs):
     print("Starting dataset downloads")
+
+    datasets = kwargs["datasets"]
 
     for name in datasets:
         print("Downloading {} dataset".format(name))
@@ -25,5 +28,12 @@ def main():
     print("All datasets have been downloaded!")
 
 
-if __name__ == "__main__":
-    main()
+def download_pp_complete(dag: DAG, datasets) -> PythonOperator:
+    print_data_task = PythonOperator(
+        task_id='download_pp_complete',
+        python_callable=entry_point,
+        op_kwargs={"datasets" : datasets},
+        dag=dag,
+    )
+
+    return print_data_task
