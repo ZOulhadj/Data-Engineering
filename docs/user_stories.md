@@ -23,6 +23,8 @@ Additionally, user stories are recorded through several methods:
 ### Sprint 4 user stories
 * Metrics DAGs created and refined
 * Update files
+* Create powerpoint presentation
+* Work on individual assessments
 
 ### Table
 | Sprint # | User Stories | Priority | Estimated Duration | Assigned To |
