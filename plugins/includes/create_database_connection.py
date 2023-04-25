@@ -34,7 +34,7 @@ def create_airflow_connection(dag: DAG) -> PythonOperator:
         python_callable=create_conn,
         op_kwargs={ "conn_id" : "1",
                     "conn_type" : "postgres", 
-                    "host" : "localhost", 
+                    "host" : "postgres", 
                     "login" : "airflow", 
                     "pwd": "airflow", 
                     "port" : "5432", 

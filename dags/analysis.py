@@ -45,7 +45,7 @@ with models.DAG(
         print(uk_sales.head())
         price_trend = pd.read_sql_query('select sum("Price"),Year as total_sales from "price_housing_data" group by Year order by Year desc',con=engine)
         print(price_trend.head())
-        total_sales = pd.read_sql_query('select count("Transaction unique identifier") as total_sales from "price_housing_data" group by Year',con=engine)
+        total_sales = pd.read_sql_query('select count("Transaction_unique_identifier") as total_sales from "price_housing_data" group by Year',con=engine)
         print(total_sales.head())
         property_dist = pd.read_sql_query('select avg("Price") as avg_property_price from "price_housing_data" group by "Property Type"',con=engine)
         print(property_dist.head())
