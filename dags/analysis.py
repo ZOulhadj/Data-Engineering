@@ -49,6 +49,10 @@ with models.DAG(
         print(total_sales.head())
         property_dist = pd.read_sql_query('select avg("Price") as avg_property_price from "price_housing_data" group by "Property Type"',con=engine)
         print(property_dist.head())
+        # average price by district
+        property_area = pd.read_sql_query('select avg("Price") as avg_property_price from "price_housing_data" group by "District"',con=engine)
+        print(property_area.head())
+        
     
     def validation_checks():
         engine = create_engine('postgresql+psycopg2://airflow:airflow@postgres/airflow')
