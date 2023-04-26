@@ -1,1 +1,0 @@
-COPY data.pp_complete FROM '/data/pp-2022.csv' DELIMITER ',' CSV;

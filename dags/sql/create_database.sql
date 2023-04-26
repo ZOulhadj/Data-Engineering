@@ -1,2 +1,0 @@
--- CREATE DATABASE prices_paid;
-CREATE SCHEMA IF NOT EXISTS data
