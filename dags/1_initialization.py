@@ -19,7 +19,7 @@ def download_dataset():
     output = subprocess.check_output(cmd.split(" "))
     output = output.decode(encoding='UTF-8')
 
-    print("downloading...")
+    print("Downloading dataset...")
     print(output)
 
     od.download("https://www.kaggle.com/datasets/hm-land-registry/uk-housing-prices-paid")
@@ -27,12 +27,17 @@ def download_dataset():
     return True
 
 def clean_dataset():
-    # Clean dataset values
-    df = pd.read_csv('./uk-housing-prices-paid/price_paid_records.csv', nrows=100000) # limiting row numbers to 100000 because of RAM/Memory needs
+    # limiting row numbers to 100000 because of RAM/Memory needs
+    max_rows = 100000
+
+    # Clean initial dataset values
+    df = pd.read_csv('./uk-housing-prices-paid/price_paid_records.csv', nrows=max_rows)
     df = df.dropna()
     df = df.drop_duplicates()
     col = df.columns.str.split(',')
     df = df.reindex(columns=df.columns.repeat(col.str.len()))
+
+    # Rename columns
     df.columns = sum(col.tolist(), [])
     df.rename(columns={ df.columns[0]: "Transaction_unique_identifier" }, inplace=True)
     df.rename(columns={ df.columns[1]: "Price" }, inplace = True)
@@ -70,9 +75,7 @@ with models.DAG(
         catchup=False,
         default_args=default_dag_args) as dag:
          
-    start = DummyOperator(
-        task_id='start',
-        dag=dag)
+    start = DummyOperator(task_id='start', dag=dag)
         
     download_data = python_operator.PythonOperator(
         task_id='download_data',
@@ -82,9 +85,6 @@ with models.DAG(
         task_id='clean_data',
         python_callable=clean_dataset)
     
-    end = DummyOperator(
-        task_id='end',
-        dag=dag
-    )
+    end = DummyOperator(task_id='end', dag=dag)
 
     start >> download_data >> clean_data >> end

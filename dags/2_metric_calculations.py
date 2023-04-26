@@ -42,6 +42,7 @@ def calculate_metrics():
 
     # Perform queries
 
+    # TODO: Explanation is needed for each query
     #
     uk_sales = pd.read_sql_query(uk_sales_sql, con=engine)
     #
@@ -54,6 +55,7 @@ def calculate_metrics():
     property_area = pd.read_sql_query(property_area_sql, con=engine)
 
     # Print "head" of results
+    # TODO: These values need to be stored into a table
     print("Average UK sales")
     print(uk_sales.head())
     print("Price trend")
@@ -86,9 +88,7 @@ with models.DAG(
         catchup=False,
         default_args=default_dag_args) as dag:
       
-    start = DummyOperator(
-        task_id='start',
-        dag=dag)
+    start = DummyOperator(task_id='start', dag=dag)
     
     validation_checks_data = python_operator.PythonOperator(
         task_id='null_value_check',
@@ -102,9 +102,6 @@ with models.DAG(
         task_id='calculate_metrics',
         python_callable=calculate_metrics)
     
-    end = DummyOperator(
-        task_id='end',
-        dag=dag
-    )
+    end = DummyOperator(task_id='end', dag=dag)
 
     start >> validation_checks_data >> analyze_stats >> calculate_metrics_calculation >> end
