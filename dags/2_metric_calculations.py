@@ -28,6 +28,7 @@ def null_value_check():
 
 def summary_stats():
     engine = create_engine('postgresql+psycopg2://airflow:airflow@postgres/airflow')
+    
     df = pd.read_sql_query('select * from "price_housing_data"', con=engine)
     print(df.head())
     stats=df.describe()
@@ -54,8 +55,7 @@ def calculate_metrics():
     # average price by district
     property_area = pd.read_sql_query(property_area_sql, con=engine)
 
-    # Print "head" of results
-    # TODO: These values need to be stored into a table
+    # Print preview of metrics in logs
     print("Average UK sales")
     print(uk_sales.head())
     print("Price trend")
@@ -67,7 +67,22 @@ def calculate_metrics():
     print("Average price by district")
     print(property_area.head())
 
+    # Store complete metrics into tables
+    df = pd.DataFrame(uk_sales)
+    df.to_sql('price_housing_metric_average_uk_sales', engine, if_exists='replace')
+    df = pd.DataFrame(price_trend)
+    df.to_sql('price_housing_metric_price_trend', engine, if_exists='replace')
+    df = pd.DataFrame(total_sales)
+    df.to_sql('price_housing_metric_total_sales_by_year', engine, if_exists='replace')
+    df = pd.DataFrame(property_type)
+    df.to_sql('price_housing_metric_property_type', engine, if_exists='replace')
+    df = pd.DataFrame(property_area)
+    df.to_sql('price_housing_metric_property_area', engine, if_exists='replace')
+
     return True
+
+
+
 
 def save_results():
     return True
