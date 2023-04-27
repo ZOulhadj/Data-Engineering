@@ -1,9 +1,7 @@
-<!-- 
-<p align="center">
-  <img width="50%" height="auto" src="https://github.com/Roe-Binary-Bandits/Data-Engineering/raw/develop/assets/logo.png">
-</p> -->
 
-![logo](assets/new_logo.png)
+<p align="center">
+  <img width="100%" height="auto" src="assets/new_logo.png">
+</p>
 
 # Data Pipeline
 
