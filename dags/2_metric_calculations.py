@@ -1,3 +1,4 @@
+# Import necessary libraries and modules
 from __future__ import print_function
 from datetime import datetime, timedelta
 from airflow.utils.dates import days_ago
@@ -15,6 +16,7 @@ total_sales_sql = 'select count("Transaction_unique_identifier") as total_sales 
 property_type_sql = 'select avg("Price") as avg_property_price from "price_housing_data" group by "Property Type"'
 property_area_sql = 'select avg("Price") as avg_property_price from "price_housing_data" group by "District"'
 
+# Function to check for null values in the dataset
 def null_value_check():
     engine = create_engine('postgresql+psycopg2://airflow:airflow@postgres/airflow')
     null_count = pd.read_sql_query('select count(*) as null_count_ from "price_housing_data" where "Price" is NULL', con=engine)
@@ -26,6 +28,7 @@ def null_value_check():
 
     return True
 
+# Function to calculate summary statistics for the dataset
 def summary_stats():
     engine = create_engine('postgresql+psycopg2://airflow:airflow@postgres/airflow')
     
@@ -37,6 +40,7 @@ def summary_stats():
 
     return True
 
+# Function to calculate various metrics from the dataset
 def calculate_metrics():
     # Establish database connection
     engine = create_engine('postgresql+psycopg2://airflow:airflow@postgres/airflow')
@@ -81,12 +85,11 @@ def calculate_metrics():
 
     return True
 
-
-
-
+# Placeholder function for future functionality to save the calculated metrics and summary statistics
 def save_results():
     return True
 
+# Set default arguments for the DAG
 default_dag_args = {
     'owner': 'you',
     'depends_on_past': False,
@@ -96,13 +99,15 @@ default_dag_args = {
     'retries': 0,
 }
 
+# Define the DAG using a context manager
 with models.DAG(
         '2_metric_calculations',
         schedule_interval=None,
         max_active_runs=1,
         catchup=False,
         default_args=default_dag_args) as dag:
-      
+    
+    # Define tasks for the DAG  
     start = DummyOperator(task_id='start', dag=dag)
     
     validation_checks_data = python_operator.PythonOperator(
@@ -119,4 +124,5 @@ with models.DAG(
     
     end = DummyOperator(task_id='end', dag=dag)
 
+    # Set the order of task execution using the bitshift operator
     start >> validation_checks_data >> analyze_stats >> calculate_metrics_calculation >> end
