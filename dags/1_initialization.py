@@ -1,3 +1,4 @@
+# Import necessary libraries and modules
 from __future__ import print_function
 from datetime import datetime, timedelta
 from airflow.utils.dates import days_ago
@@ -9,23 +10,27 @@ import json,subprocess
 import pandas as pd
 from sqlalchemy import create_engine
 
+# Function to download the dataset from Kaggle
 def download_dataset():
     api_dict = {"username":"taylorh122","key":"dac660c475435516f8cedd8924069d7c"} # set this in .env
 
+    # Write the API credentials to a kaggle.json file
     with open(f"kaggle.json", "w", encoding='utf-8') as f:
         json.dump(api_dict, f)
 
+    # Set the file permissions for the kaggle.json file
     cmd = f"chmod 600 kaggle.json"
     output = subprocess.check_output(cmd.split(" "))
     output = output.decode(encoding='UTF-8')
 
     print("Downloading dataset...")
     print(output)
-
+    
+    # Download the dataset using opendatasets library
     od.download("https://www.kaggle.com/datasets/hm-land-registry/uk-housing-prices-paid")
 
     return True
-
+# Function to clean the dataset and store it in a PostgreSQL database
 def clean_dataset():
     # limiting row numbers to 100000 because of RAM/Memory needs
     max_rows = 100000
@@ -67,14 +72,14 @@ default_dag_args = {
     'email_on_retry': False,
     'retries': 0,
 }
-
+# Define the DAG using a context manager
 with models.DAG(
         '1_initialization',
         schedule_interval=None,
         max_active_runs=1,
         catchup=False,
         default_args=default_dag_args) as dag:
-         
+    # Define the DAG using a context manager     
     start = DummyOperator(task_id='start', dag=dag)
         
     download_data = python_operator.PythonOperator(
@@ -86,5 +91,6 @@ with models.DAG(
         python_callable=clean_dataset)
     
     end = DummyOperator(task_id='end', dag=dag)
-
+    
+    # Set the order of task execution using the bitshift operator
     start >> download_data >> clean_data >> end
