@@ -37,7 +37,7 @@ def clean_dataset():
     col = df.columns.str.split(',')
     df = df.reindex(columns=df.columns.repeat(col.str.len()))
 
-    # Rename columns
+    # Rename columns and add year and month columns
     df.columns = sum(col.tolist(), [])
     df.rename(columns={ df.columns[0]: "Transaction_unique_identifier" }, inplace=True)
     df.rename(columns={ df.columns[1]: "Price" }, inplace = True)
@@ -58,7 +58,7 @@ def clean_dataset():
     return True
 
 
-
+# Set default arguments for the DAG
 default_dag_args = {
     'owner': 'you',
     'depends_on_past': False,
