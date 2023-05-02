@@ -5,7 +5,14 @@
 
 # Data Pipeline
 
-![pipeline](assets/pipeline.png)
+### Initialisation
+![pipeline_1](assets/1_pipeline.png)
+
+### Metric Calculations
+![pipeline_2](assets/2_pipeline.png)
+
+### Visualisations
+![pipeline_3](assets/3_pipeline.png)
 
 # Team Members
 * Zakariya Oulhadj
