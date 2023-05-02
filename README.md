@@ -11,14 +11,18 @@
 ### Metric Calculations
 ![pipeline_2](assets/2_pipeline.png)
 
-### Visualisations
+### ElasticSearch
 ![pipeline_3](assets/3_pipeline.png)
+
+# Visualisations
+![visualisations](assets/visualisations.png)
 
 # Team Members
 * Zakariya Oulhadj
 * Taylor Head
 * Adam Zbikowski
 * Samoil Bogdan Adascalului
+
 
 # Team Roles
 * [@ZOulhadj](https://github.com/ZOulhadj) - Product Owner
@@ -28,6 +32,5 @@
 
 
 # Getting started 
-
-The wiki can be accessed [here](https://github.com/Roe-Binary-Bandits/Data-Engineering/wiki)
+For a full guide please go [here](https://github.com/Roe-Binary-Bandits/Data-Engineering/wiki)
 
