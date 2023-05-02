@@ -1,2 +1,5 @@
 logs/
-dags/__pycache__
+__pycache__/
+plugins/includes/__pycache__/
+data/
+venv

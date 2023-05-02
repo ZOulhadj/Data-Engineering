@@ -1,0 +1,6 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['compose', 'up', '-d']
+# running docker-compose
+#- name: 'docker/compose'
+#  args: ['up', '-d']
