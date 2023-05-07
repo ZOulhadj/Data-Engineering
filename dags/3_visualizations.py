@@ -9,7 +9,7 @@ from airflow.operators.dummy import DummyOperator
 from sqlalchemy import create_engine
 from elasticsearch import Elasticsearch
 from airflow import models
-
+# date
 utc_date = days_ago(1)
 local_tz = pendulum.timezone("CET")
 
