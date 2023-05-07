@@ -59,7 +59,7 @@ services:
       retries: 5
     networks:
       - my_network
-
+# PostgreSQL database for storing Airflow metadata and connections.
   postgres:
     image: postgres:13
     container_name: postgres
