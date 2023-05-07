@@ -76,7 +76,7 @@ services:
       - .env
     networks:
       - my_network
-
+# Airflow scheduler for triggering tasks based on the DAG schedule.
   scheduler:
     <<: [*common, *depends-on]
     container_name: airflow-scheduler
