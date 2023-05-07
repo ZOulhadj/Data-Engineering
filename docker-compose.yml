@@ -29,6 +29,7 @@ x-depends-on:
 
 # Defines the various services that will be started.
 services:
+# Initializes the Airflow database and creates default user.
   airflow-init:
     <<: *common
     container_name: airflow-init
