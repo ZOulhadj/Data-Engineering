@@ -106,7 +106,7 @@ services:
       - "9300:9300"
     networks:
       - my_network
-
+# Kibana for visualizing and analyzing Airflow logs and metadata stored in Elasticsearch.
   kibana:
     image: docker.elastic.co/kibana/kibana:7.16.3
     container_name: my_kibana
