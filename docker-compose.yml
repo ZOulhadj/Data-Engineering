@@ -116,9 +116,9 @@ services:
       - "5601:5601"
     networks:
       - my_network
-
+# Defines named volumes for storing PostgreSQL data.
 volumes:
   postgres_data:
-
+# Defines named volumes for storing PostgreSQL data.
 networks:
   my_network:
