@@ -27,6 +27,7 @@ x-depends-on:
     airflow-init:
       condition: service_completed_successfully
 
+# Defines the various services that will be started.
 services:
   airflow-init:
     <<: *common
