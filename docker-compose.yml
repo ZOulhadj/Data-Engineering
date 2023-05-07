@@ -1,4 +1,7 @@
+# Specifies the version of the Compose file format.
 version: '3.8'
+
+# Defines a common set of properties and configurations that are used by multiple services.
 x-common:
   &common
   build:
@@ -7,6 +10,7 @@ x-common:
   user: "${AIRFLOW_UID}:0"
   env_file: 
     - .env
+  # Maps volumes to the host machine's file system for storing DAGs, logs, plugins, and data.
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
@@ -14,6 +18,7 @@ x-common:
     - ./data:/opt/airflow/data
     - /var/run/docker.sock:/var/run/docker.sock
 
+# Defines dependencies between services.
 x-depends-on:
   &depends-on
   depends_on:
