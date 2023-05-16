@@ -18,13 +18,13 @@ Additionally, user stories are recorded through several methods:
 * Data Preprocessing and Cleaning✅
 ### Sprint 3 user stories
 * DAG update ✅
-* Integration with Google Cloud
+* Integration with Google Cloud ✅
 
 ### Sprint 4 user stories
-* Metrics DAGs created and refined
-* Update files
-* Create powerpoint presentation
-* Work on individual assessments
+* Metrics DAGs created and refined ✅
+* Update files ✅
+* Create powerpoint presentation ✅
+* Work on individual assessments ✅
 
 ### Table
 | Sprint # | User Stories | Priority | Estimated Duration | Assigned To |
