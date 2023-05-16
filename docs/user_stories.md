@@ -25,6 +25,7 @@ Additionally, user stories are recorded through several methods:
 * Update files ✅
 * Create powerpoint presentation ✅
 * Work on individual assessments ✅
+* Create the visualizations ✅
 
 ### Table
 | Sprint # | User Stories | Priority | Estimated Duration | Assigned To |
